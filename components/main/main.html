@@ -1,0 +1,58 @@
+<div class="featured-wrapper">
+    <div class="ribbon">
+        <span>Featured</span>
+        <div class="sidebar-link" ng-link="sidebar">more...</div>
+    </div>
+    <!-- primaryFeatured -->
+    <!--<div ng-viewport="primary-feature"></div>-->
+    <section class="featured primary-feature">
+        <div>
+            <img src="images/{{main.primeFeature.image}}" alt="test" >
+            <div class="splash">{{main.primeFeature.city}}</div>
+            <div class="feature-listing">
+                <div class="feature-head">{{main.primeFeature.price | currency:"$":0}}</div>
+                <div class="feature-property">{{main.primeFeature.beds}} Bedrooms</div>
+                <div class="feature-property">{{main.primeFeature.baths}} Baths</div>
+                <div class="feature-property"><span ng-bind="main.primeFeature.sqft"></span> Sq. Ft.</div>
+                <div class="feature-description">
+                    <span class="subhead">Description</span>
+                    <p>{{main.primeFeature.description}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Featured List -->
+    <!--<div ng-viewport="feature-list"></div>-->
+    <!--<feature-list></feature-list>-->
+    <section class="featured other-feature-container">
+        <!-- feature -->
+        <!--<feature ng-repeat="listing in vm.listings" feature-data="listing"></feature>-->
+        <div class="other-feature" ng-repeat="listing in main.listings" >
+            <div>
+                <div class="crop">
+                    <img src="images/{{listing.image}}" alt="test" >
+                </div>
+                <div class="splash">{{listing.city}}</div>
+                <div class="feature-listing">
+                    <div class="feature-head">{{listing.price | currency:"$":0}}</div>
+                    <div class="feature-property">{{listing.beds}} Bedrooms</div>
+                    <div class="feature-property">{{listing.baths}} Baths</div>
+                    <div class="feature-property">{{listing.sqft}} Sq. Ft.</div>
+                    <div class="feature-description">
+                        <span class="subhead">Description</span>
+                        <p>{{listing.description}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!--  div.gutter#gutter2-->
+
+    <section class="sidebar">
+        <!--<div class="sidebar-container" ui-view="sidebarContainer">-->
+        <div ng-viewport="sidebar"></div>
+
+        <!--</div>-->
+    </section>
+</div>

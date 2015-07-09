@@ -1,0 +1,77 @@
+.sidebar {
+    position: absolute;
+    top: 0px;
+    right: -1000px;
+    width: 25%;
+    min-width: 200px;
+    height: 100vh;
+    min-height: 100vh;
+    overflow-y: auto;
+    border: 2px solid #06af45;
+    background-color: white;
+    padding: 3px;
+    transition: all 0.5s ease; }
+.sidebar.open {
+    right: 0; }
+.sidebar .sidebar-head {
+    display: block;
+    float: left;
+    width: 100%;
+    padding-top: 0px; }
+.sidebar .sidebar-head .sidebar-close {
+    float: right;
+    cursor: pointer;
+    border: 1px solid #999;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: #999; }
+.sidebar .sidebar-head .sidebar-close .close-icon {
+    margin-top: -4px;
+    color: white;
+    font-weight: bold; }
+.sidebar .sidebar-listing {
+    width: 100%;
+    padding: 6px; }
+.sidebar .sidebar-listing .crop {
+    width: 60%;
+    height: 125px;
+    overflow: hidden;
+    float: left;
+    margin-right: 6px; }
+.sidebar .sidebar-listing .crop img {
+    width: 100%; }
+.sidebar .sidebar-listing .sidebar-listing-item {
+    width: 100%;
+    height: 210px; }
+.sidebar .sidebar-listing .sidebar-listing-item .listing-head {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center; }
+.sidebar .sidebar-listing .sidebar-listing-item .listing-property {
+    font-size: 13px;
+    font-weight: 400;
+    margin: 0 20px; }
+.sidebar .sidebar-listing .sidebar-listing-item .listing-description {
+    float: left;
+    margin-top: .2em;
+    margin-bottom: 1em;
+    position: relative;
+    height: 4.8em;
+    line-height: 1.2em;
+    overflow: hidden; }
+.sidebar .sidebar-listing .sidebar-listing-item .listing-description:after {
+    content: "";
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40%;
+    height: 1.2em;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), white 50%); }
+.sidebar .sidebar-listing .sidebar-listing-item .listing-description .subhead {
+    font-weight: bold; }
+.sidebar .sidebar-listing .sidebar-listing-item .listing-description p {
+    margin-top: .3em; }
+
